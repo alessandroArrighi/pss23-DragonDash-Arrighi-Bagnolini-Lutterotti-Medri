@@ -1,0 +1,1 @@
+In this folder we have all the implementation entities that handle the game
