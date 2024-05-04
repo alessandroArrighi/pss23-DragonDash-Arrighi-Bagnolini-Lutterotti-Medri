@@ -1,4 +1,4 @@
-package main.java.it.unibo.dragondash.model.api.game;
+package it.unibo.dragondash.model.api.game;
 
 public abstract class Entity {
     protected  float x,y;
