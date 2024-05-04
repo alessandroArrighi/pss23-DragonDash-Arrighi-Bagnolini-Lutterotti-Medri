@@ -28,4 +28,9 @@ public class Character extends Entity{
         gravity = 2;
         maxHeight = 290;
     }
+
+    public void jump() {
+		isJumping = true;
+		jumpHeight = 100;
+	}
 }
