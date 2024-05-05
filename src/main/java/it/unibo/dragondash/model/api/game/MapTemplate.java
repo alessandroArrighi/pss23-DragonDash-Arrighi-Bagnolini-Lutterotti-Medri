@@ -13,7 +13,7 @@ public abstract class MapTemplate {
     public MapTemplate() {
         this.speed = this.STARTING_SPEED;
         this.state = false;
-        this.pause = false;
+        this.pause = true;
     }
 
     abstract public void computeSpeed();
@@ -33,6 +33,7 @@ public abstract class MapTemplate {
     public void start() {
         if(!this.state) {
             this.state = true;
+            this.pause = false;
             this.computeSpeed();
         }
         else {
@@ -47,6 +48,15 @@ public abstract class MapTemplate {
         }
         else {
             throw new IllegalStateException("Map is already stopped");
+        }
+    }
+
+    public void pause() {
+        if(this.state && !this.pause) {
+            this.pause = true;
+        }
+        else {
+            throw new IllegalStateException("Map is already in pause or is stopped");
         }
     }
 
