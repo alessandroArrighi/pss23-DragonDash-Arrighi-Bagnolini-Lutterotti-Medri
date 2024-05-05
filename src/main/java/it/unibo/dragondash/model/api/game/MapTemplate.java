@@ -60,4 +60,13 @@ public abstract class MapTemplate {
         }
     }
 
+    public void resume() {
+        if(this.state && this.pause) {
+            this.pause = false;
+        }
+        else {
+            throw new IllegalStateException("Map is not in pause or is stopped");
+        }
+    }
+
 }
