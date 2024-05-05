@@ -29,6 +29,10 @@ public abstract class MapTemplate {
         return this.speed;
     }
 
+    public void setSpeed(final long speed) {
+        this.speed = speed;
+    }
+
     protected boolean getState() {
         return this.state;
     }
