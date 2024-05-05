@@ -8,16 +8,26 @@ public abstract class MapTemplate {
     
     private long speed;
     private boolean state;
+    private boolean pause;
 
     public MapTemplate() {
         this.speed = this.STARTING_SPEED;
         this.state = false;
+        this.pause = false;
     }
 
     abstract public void computeSpeed();
 
     public long getSpeed() {
         return this.speed;
+    }
+
+    protected boolean getState() {
+        return this.state;
+    }
+
+    protected boolean isPause() {
+        return this.pause;
     }
 
     public void start() {
