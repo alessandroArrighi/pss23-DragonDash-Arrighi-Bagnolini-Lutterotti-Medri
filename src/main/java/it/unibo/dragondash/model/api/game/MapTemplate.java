@@ -1,6 +1,7 @@
 package it.unibo.dragondash.model.api.game;
 
 import java.lang.IllegalStateException;
+import org.apache.commons.lang3.time.StopWatch;
 
 public abstract class MapTemplate {
 
@@ -9,14 +10,20 @@ public abstract class MapTemplate {
     private long speed;
     private boolean state;
     private boolean pause;
+    private StopWatch watch;
 
     public MapTemplate() {
         this.speed = this.STARTING_SPEED;
         this.state = false;
         this.pause = true;
+        this.watch = new StopWatch();
     }
 
     abstract public void computeSpeed();
+
+    protected StopWatch getStopWatch() {
+        return this.watch;
+    }
 
     public long getSpeed() {
         return this.speed;
