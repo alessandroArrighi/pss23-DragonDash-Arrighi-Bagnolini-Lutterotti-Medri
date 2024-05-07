@@ -18,4 +18,8 @@ public class Sprite {
 
         return image.getHeight(null);
     }
+
+    public void draw(Graphics drawer, int x, int y) {
+        drawer.drawImage(image, x, y, null);
+    }
 }
