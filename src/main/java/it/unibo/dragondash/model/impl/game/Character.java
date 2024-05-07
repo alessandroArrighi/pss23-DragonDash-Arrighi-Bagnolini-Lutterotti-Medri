@@ -31,6 +31,5 @@ public class Character extends Entity{
 
     public void jump() {
 		isJumping = true;
-		jumpHeight = 100;
 	}
 }
