@@ -1,10 +1,10 @@
 package it.unibo.dragondash.model.api.game;
 
-public abstract class Entity {
-    protected  float x,y;
+public class Entity {
+    protected int x,y;
     protected int width, height;
 
-    public Entity(float x, float y, int width, int height) {
+    public Entity(int x, int y, int width, int height) {
         this.x = x;
         this.y = y;
         this.width = width;
