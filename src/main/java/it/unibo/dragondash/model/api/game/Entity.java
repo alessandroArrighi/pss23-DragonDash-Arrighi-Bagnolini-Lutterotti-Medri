@@ -2,7 +2,7 @@ package it.unibo.dragondash.model.api.game;
 
 import it.unibo.dragondash.view.api.GameView.Sprite;
 
-public abstract class Entity {
+public class Entity {
     protected  float x,y;
 
     public Sprite sprite;
