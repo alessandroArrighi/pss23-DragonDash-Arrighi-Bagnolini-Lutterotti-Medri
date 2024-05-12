@@ -11,7 +11,7 @@ public class Character extends Entity{
     int gravity;
     int maxHeight;
 
-    public Character(float x, float y, int width, int height) {
+    public Character(int x, int y, int width, int height) {
         super(x, y, width, height);
         
         setDefaultValues();
